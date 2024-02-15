@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generate Quotes</title>
+        <link rel="icon" href="logo.png">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        <!-- Bootstrap JS and Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="quotes.css">
+
+        <!-- Animation CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+    </head>
+<body>
+   <section id="quotes">
+     
+    <nav class="nav-bar">
+        <img src="logo.png" alt="image">
+        <div class="icons">
+            <ul>
+                <li><a href="https://www.facebook.com/mbilal.sajid.73" target="_blank"><img src="facebook-icon.png" alt="image"></a></li>
+                <li><a href="https://www.instagram.com/_b_h_a_l_i_?igsh=dWo4ODZsMnJqYW92" target="_blank"><img src="instagram-icon.png" alt="image"></a></li>
+                <li><a href="https://www.linkedin.com/in/m-bilal-sajid-5a7157267/" target="_blank"><img src="linkedin-icon.png" alt="image"></a></li>
+            </ul>
+        </div>
+    </nav>
+   <div class="container">
+        <div class="row">
+            <div class="col-md-6 text text-center">
+                <h1>Quotes Generation</h1>
+                <p>You can generate different quotes by a single click</p>
+                <img src="downword_arrow.png" alt="image"><br>
+                <button class="btn btn-primary" onclick="GenerateQuotes()">CLICK HERE TO GENERATE QUOTES</button>            
+            </div>
+            <div class="col-md-6 result text-center">
+                <h5>The Generated Quote is</h5>
+                <div id="block">
+                    Quotes goes here...
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright c made with BHALI-DEVELOPER</p>
+    </div>
+   </section>
+
+
+   <script>
+   var quotes = [
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "In the middle of difficulty lies opportunity. - Albert Einstein",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+    "Believe you can and you're halfway there. - Theodore Roosevelt",
+    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+    "Be the change that you wish to see in the world. - Mahatma Gandhi",
+    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+    "Do not go where the path may lead, go instead where there is no path and leave a trail. - Ralph Waldo Emerson",
+    "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll",
+    "The only impossible journey is the one you never begin. - Tony Robbins",
+    "The only thing we have to fear is fear itself. - Franklin D. Roosevelt",
+    "Happiness is not something ready-made. It comes from your own actions. - Dalai Lama",
+    "The best way to predict the future is to create it. - Peter Drucker",
+    "Change your thoughts and you change your world. - Norman Vincent Peale",
+    "Every moment is a fresh beginning. - T.S. Eliot",
+    "You miss 100% of the shots you don't take. - Wayne Gretzky",
+    "In three words I can sum up everything I've learned about life: It goes on. - Robert Frost",
+    "Life is what happens when you're busy making other plans. - John Lennon",
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela"
+];
+
+    function GenerateQuotes(){
+        var quote2 = document.getElementById("block");
+        var RandomNo = Math.floor ( Math.random() * quotes.length );
+        quote2.innerHTML = quotes[RandomNo];
+    }
+   </script>
+
+</body>
+</html>
